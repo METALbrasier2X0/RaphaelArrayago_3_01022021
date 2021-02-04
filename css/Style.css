@@ -23,27 +23,46 @@ body {
 }
 
 header {
+  padding: 10px;
+  position: fixed;
+  width: 100%;
   text-align: center;
+  top: 0;
 }
 
 #localisation {
+  margin-top: 58px;
   text-align: center;
-}
-#localisation h3 {
-  text-shadow: 0.55rem 0.55rem #212121;
 }
 
 button {
   border-radius: 20px;
   background: linear-gradient(#FF79DA, #9356DC);
+  border: none;
+  padding: 8px 25px 10px 25px;
+  font-size: 15px;
+  font-weight: 500;
+  color: white;
+  box-shadow: 0px 5px 10px -2px #212121;
 }
 
 section {
   padding: 20px;
 }
 
+footer {
+  padding: 20px;
+}
 footer h3 {
   font-family: "Shrikhand", cursive;
+  margin: 0px;
+}
+footer ul {
+  padding: 0;
+  margin: 10px, 0, 10px, 0;
+}
+footer li {
+  margin-top: 10px;
 }
 
 /*# sourceMappingURL=Style.css.map */

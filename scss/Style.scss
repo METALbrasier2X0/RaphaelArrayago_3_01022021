@@ -4,8 +4,10 @@ $tertiary: #99E2D0;
 $grey: #eee;
 $dark: #212121;
 
-@mixin heading-shadow($colour: $colour-primary){
-  text-shadow: .55rem .55rem $colour;
+@mixin regular-text($colour: $colour-primary){
+font-size: 15px;
+font-weight:500;
+color: $colour;
 }
 
 html{
@@ -38,17 +40,27 @@ body{
 ///////////// Fin code général /////////////
 
 header{
+  padding: 10px;
+  position: fixed;
+  width:100%;
   text-align: center;
+  top: 0;
 }
 
+
 #localisation{
+  margin-top: 58px;
   text-align: center;
-    h3{@include heading-shadow($dark);}
+    // h3{@include heading-shadow($dark);}
 }
 
 button{
   border-radius: 20px;
-  background: linear-gradient($secondary,$primary)
+  background: linear-gradient($secondary,$primary);
+  border: none;
+  padding: 8px 25px 10px 25px;
+  @include regular-text(white);
+  box-shadow: 0px 5px 10px -2px $dark;
 }
 
 section{
@@ -56,5 +68,9 @@ section{
 }
 
 footer{
-  h3{font-family: 'Shrikhand', cursive;}
+  padding: 20px;
+  h3{font-family: 'Shrikhand', cursive;
+  margin: 0px}
+  ul{padding: 0; margin: 10px,0,10px,0;}
+  li{margin-top: 10px}
 }
