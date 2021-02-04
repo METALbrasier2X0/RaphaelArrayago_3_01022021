@@ -1,0 +1,60 @@
+$primary: #9356DC;
+$secondary: #FF79DA;
+$tertiary: #99E2D0;
+$grey: #eee;
+$dark: #212121;
+
+@mixin heading-shadow($colour: $colour-primary){
+  text-shadow: .55rem .55rem $colour;
+}
+
+html{
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+li{
+    list-style: none;
+}
+
+body{
+  margin: 0px;
+}
+
+.bg{
+  &--grey{
+    background-color: $grey;
+    }
+  &--white{
+    background-color: white;
+  }
+  &--dark{
+    background-color: $dark;
+    color: white;
+  }
+}
+
+
+///////////// Fin code général /////////////
+
+header{
+  text-align: center;
+}
+
+#localisation{
+  text-align: center;
+    h3{@include heading-shadow($dark);}
+}
+
+button{
+  border-radius: 20px;
+  background: linear-gradient($secondary,$primary)
+}
+
+section{
+  padding: 20px;
+}
+
+footer{
+  h3{font-family: 'Shrikhand', cursive;}
+}

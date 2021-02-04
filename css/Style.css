@@ -1,0 +1,49 @@
+html {
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  margin: 0px;
+}
+
+.bg--grey {
+  background-color: #eee;
+}
+.bg--white {
+  background-color: white;
+}
+.bg--dark {
+  background-color: #212121;
+  color: white;
+}
+
+header {
+  text-align: center;
+}
+
+#localisation {
+  text-align: center;
+}
+#localisation h3 {
+  text-shadow: 0.55rem 0.55rem #212121;
+}
+
+button {
+  border-radius: 20px;
+  background: linear-gradient(#FF79DA, #9356DC);
+}
+
+section {
+  padding: 20px;
+}
+
+footer h3 {
+  font-family: "Shrikhand", cursive;
+}
+
+/*# sourceMappingURL=Style.css.map */
