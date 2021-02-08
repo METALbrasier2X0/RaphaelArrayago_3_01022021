@@ -1,7 +1,8 @@
 $primary: #9356DC;
+$primary-op: #9356DC40;
 $secondary: #FF79DA;
 $tertiary: #99E2D0;
-$grey: #eee;
+$grey: #f2f2f2;
 $dark: #212121;
 
 @mixin regular-text($colour: $colour-primary){
@@ -49,7 +50,6 @@ header{
 
 
 #localisation{
-  margin-top: 58px;
   text-align: center;
     // h3{@include heading-shadow($dark);}
 }
@@ -58,7 +58,7 @@ button{
   border-radius: 20px;
   background: linear-gradient($secondary,$primary);
   border: none;
-  padding: 8px 25px 10px 25px;
+  padding: 8px 30px 10px 30px;
   @include regular-text(white);
   box-shadow: 0px 5px 10px -2px $dark;
 }
@@ -73,4 +73,37 @@ footer{
   margin: 0px}
   ul{padding: 0; margin: 10px,0,10px,0;}
   li{margin-top: 10px}
+}
+
+.fonction{
+    background-color: $grey;
+    display: flex;
+    margin: 20px;
+    border-radius: 15px;
+  &__text{}
+  &__icon{margin:  19px 35px 0px 30px;}
+  &:hover{background-color: $primary-op;}
+  &:hover > i {color: $primary;}
+  &:active{background-color: $primary-op;}
+  &:active > i {color: $primary;}
+}
+
+.zone{
+    margin-top: 58px;
+    display: flex;
+    justify-content: center;
+    border-top: 3px solid #b3b3b3;
+    background-color: #dfdfdf;
+}
+
+.restaurant{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 10px;
+    height: 200px;
+    margin: 10px;
+  &__img{width: 100%;}
+  &__caption{background-color: white;}
 }
