@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   width: 100%;
   font-family: "Roboto", sans-serif;
@@ -28,6 +29,7 @@ header {
   width: 100%;
   text-align: center;
   top: 0;
+  z-index: 99999;
 }
 
 #localisation {
@@ -93,6 +95,9 @@ footer li {
   border-top: 3px solid #b3b3b3;
   background-color: #dfdfdf;
 }
+.zone i {
+  margin: 19px 15px 0px 0px;
+}
 
 .restaurant {
   display: flex;
@@ -108,6 +113,101 @@ footer li {
 }
 .restaurant__caption {
   background-color: white;
+}
+
+#menu {
+  text-align: center;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  margin-top: -45px;
+  position: relative;
+}
+#menu h2 {
+  text-align: left;
+  font-family: "Shrikhand", cursive;
+  margin-top: -5px;
+}
+#menu h3 {
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 400;
+  margin-top: 35px;
+}
+#menu h3::after {
+  height: 3px !important;
+  width: 30px;
+  background-color: #99E2D0;
+  content: "";
+  display: block;
+  margin-top: 4px;
+}
+#menu .item {
+  text-align: left;
+  background-color: white;
+  border-radius: 15px;
+  padding: 11px;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+}
+#menu .item__name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+#menu .item__ing {
+  margin: 0;
+  font-weight: 300;
+}
+#menu .item__price {
+  margin: 0;
+  align-self: end;
+  margin-top: -16px;
+  font-size: 13px;
+}
+#menu button {
+  margin-bottom: 50px;
+  margin-top: 30px;
+}
+
+.banner {
+  margin-top: 55px;
+  height: 250px;
+}
+.banner img {
+  width: 100%;
+}
+
+@media (min-width: 900px) {
+  #menu {
+    width: 50%;
+    margin: auto;
+  }
+}
+.fa-arrow-left::before {
+  content: "";
+  left: 15px;
+  position: absolute;
+  top: 18px;
+  font-size: 22px;
+}
+
+header img {
+  margin-left: -15px;
+}
+
+.client-name {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 10px 0px 10px;
+  align-items: baseline;
+  height: 20px;
+}
+
+.fa-heart::before {
+  content: "";
 }
 
 /*# sourceMappingURL=Style.css.map */
