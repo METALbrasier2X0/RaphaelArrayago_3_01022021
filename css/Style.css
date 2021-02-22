@@ -2,6 +2,18 @@
 html {
   width: 100%;
   font-family: "Roboto", sans-serif;
+  max-width: 1550px;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  text-decoration: none;
+  color: black;
 }
 
 li {
@@ -105,14 +117,32 @@ footer li {
   flex-direction: column;
   overflow: hidden;
   border-radius: 10px;
-  height: 200px;
+  height: 237px;
   margin: 10px;
+  position: relative;
 }
 .restaurant__img {
   width: 100%;
+  border-radius: 10px;
 }
 .restaurant__caption {
   background-color: white;
+  position: absolute;
+  width: 100%;
+  top: 170px;
+  padding-bottom: 10px;
+}
+.restaurant__caption h4 {
+  margin: 10px;
+}
+.restaurant__caption p {
+  margin: 10px;
+}
+.restaurant__caption i {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 20px;
 }
 
 #menu {
@@ -160,6 +190,7 @@ footer li {
 #menu .item__ing {
   margin: 0;
   font-weight: 300;
+  font-size: 13px;
 }
 #menu .item__price {
   margin: 0;
@@ -184,6 +215,15 @@ footer li {
   #menu {
     width: 50%;
     margin: auto;
+  }
+
+  .banner {
+    height: 180px;
+    overflow: hidden;
+  }
+
+  header {
+    left: 0;
   }
 }
 .fa-arrow-left::before {
