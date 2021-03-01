@@ -1,4 +1,14 @@
 @charset "UTF-8";
+@keyframes menu-item {
+  0% {
+    transform: translatey(25px);
+    opacity: 0;
+  }
+  100% {
+    transform: translatey(0);
+    opacity: 1;
+  }
+}
 html {
   width: 100%;
   font-family: "Roboto", sans-serif;
@@ -76,6 +86,9 @@ footer ul {
 }
 footer li {
   margin-top: 10px;
+}
+footer a {
+  color: white;
 }
 
 .fonction {
@@ -173,13 +186,16 @@ footer li {
   margin-top: 4px;
 }
 #menu .item {
+  opacity: 0;
+  animation-fill-mode: forwards !important;
   text-align: left;
   background-color: white;
   border-radius: 15px;
   padding: 11px;
-  margin: 5px;
+  margin: 15px;
   display: flex;
   flex-direction: column;
+  animation: menu-item 800ms;
 }
 #menu .item__name {
   margin: 0;
@@ -305,6 +321,49 @@ header img {
   h2 {
     text-align: center;
   }
+}
+.item--1 {
+  animation-delay: 500ms !important;
+}
+
+.item--2 {
+  animation-delay: 600ms !important;
+}
+
+.item--3 {
+  animation-delay: 700ms !important;
+}
+
+.item--4 {
+  animation-delay: 800ms !important;
+}
+
+.item--5 {
+  animation-delay: 900ms !important;
+}
+
+.item--6 {
+  animation-delay: 1000ms !important;
+}
+
+.item--7 {
+  animation-delay: 1100ms !important;
+}
+
+.item--8 {
+  animation-delay: 1200ms !important;
+}
+
+.item--9 {
+  animation-delay: 1300ms !important;
+}
+
+.item--10 {
+  animation-delay: 1400ms !important;
+}
+
+.validation {
+  background-color: #99E2D0;
 }
 
 /*# sourceMappingURL=Style.css.map */

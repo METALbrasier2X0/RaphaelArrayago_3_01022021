@@ -6,6 +6,18 @@ $grey: #f2f2f2;
 $dark-op: #212121b0;
 $dark: #212121;
 
+@keyframes menu-item{
+    0% {
+        transform: translatey(25px);
+        opacity: 0
+    }
+    100% {
+        transform: translatey(0);
+        opacity: 1
+    }
+}
+
+
 @mixin regular-text($colour: $colour-primary){
 font-size: 15px;
 font-weight:500;
@@ -87,6 +99,7 @@ footer{
   margin: 0px}
   ul{padding: 0; margin: 10px,0,10px,0;}
   li{margin-top: 10px}
+  a{color: white;}
 }
 
 .fonction{
@@ -141,7 +154,7 @@ background-color:$tertiary;
 content: "";
 display: block;
 margin-top: 4px;}}
-  .item{text-align: left;  background-color: white;  border-radius: 15px; padding: 11px;margin: 5px;display: flex;flex-direction: column;
+  .item{opacity: 0; animation-fill-mode: forwards!important; ;text-align: left;  background-color: white;  border-radius: 15px; padding: 11px;margin: 15px;display: flex;flex-direction: column; animation: menu-item 800ms;
   &__name{margin: 0; font-size: 16px; font-weight: 500; margin-bottom: 3px}
   &__ing{margin: 0; font-weight: 300;font-size: 13px;}
   &__price{margin: 0; align-self: end; margin-top: -16px; font-size: 13px}}
@@ -207,4 +220,40 @@ header{ box-shadow: 0px 5px 10px -2px $dark-op;}
 .fonction{width: 300px !important;}
       #wrap-fonction{display: flex; justify-content: center;}
       h2{text-align: center;}
+}
+
+.item--1 {
+    animation-delay: 500ms!important;
+}
+.item--2 {
+    animation-delay: 600ms!important;
+}
+.item--3 {
+    animation-delay: 700ms!important;
+}
+.item--4{
+    animation-delay: 800ms!important;
+}
+.item--5 {
+    animation-delay: 900ms!important;
+}
+
+.item--6 {
+    animation-delay: 1000ms!important;
+}
+.item--7 {
+    animation-delay: 1100ms!important;
+}
+.item--8 {
+    animation-delay: 1200ms!important;
+}
+.item--9{
+    animation-delay: 1300ms!important;
+}
+.item--10 {
+    animation-delay: 1400ms!important;
+}
+
+.validation{
+  background-color: $tertiary;
 }
