@@ -1,5 +1,6 @@
 $primary: #9356DC;
 $primary-op: #9356DCB0;
+$primary-op2: #9356DC26;
 $secondary: #FF79DA;
 $secondary-op: #FF79DAB0;
 $tertiary: #99E2D0;
@@ -138,6 +139,8 @@ footer{
   ul{padding: 0; margin: 10px,0,10px,0;}
   li{margin-top: 10px}
   a{color: white;}
+  a:visited{color: white;}
+  i{margin-right: 10px; width: 15px;}
 }
 
 .fonction{
@@ -148,8 +151,9 @@ footer{
       transition: all 0.5s!important;
 
   &__text{}
-  &__icon{margin:  19px 35px 0px 30px;}
-  &:hover{background-color: $primary-op; transition: all 0.5s!important;}
+  &__icon{margin: 19px 25px 0px 20px;}
+  &__number{position: relative; top: 16px; left: -10px; background-color: $primary; color: white; height: 16px; padding: 2px;  padding-left: 7px;  padding-right: 7px; border-radius: 20px; font-size: 13px;}
+  &:hover{background-color: $primary-op2; transition: all 0.5s!important;}
   &:hover > i {color: $primary;   transition: all 0.5s!important;}
   i {transition: all 0.5s!important; }
   &:active{background-color: $primary-op;   transition: all 0.5s!important;}
@@ -209,8 +213,7 @@ margin-top: 4px;}}
   #wrap-desktop{display: flex; flex-wrap: wrap;justify-content: center;}
 
 .fa-arrow-left::before {
-    content: "\f060";
-    left: 15px;
+  left: 15px;
   position: absolute;
   top: 18px;
   font-size: 22px;

@@ -120,6 +120,13 @@ footer li {
 footer a {
   color: white;
 }
+footer a:visited {
+  color: white;
+}
+footer i {
+  margin-right: 10px;
+  width: 15px;
+}
 
 .fonction {
   background-color: #f2f2f2;
@@ -129,10 +136,23 @@ footer a {
   transition: all 0.5s !important;
 }
 .fonction__icon {
-  margin: 19px 35px 0px 30px;
+  margin: 19px 25px 0px 20px;
+}
+.fonction__number {
+  position: relative;
+  top: 16px;
+  left: -10px;
+  background-color: #9356DC;
+  color: white;
+  height: 16px;
+  padding: 2px;
+  padding-left: 7px;
+  padding-right: 7px;
+  border-radius: 20px;
+  font-size: 13px;
 }
 .fonction:hover {
-  background-color: #9356DCB0;
+  background-color: #9356DC26;
   transition: all 0.5s !important;
 }
 .fonction:hover > i {
@@ -281,7 +301,6 @@ footer a {
 }
 
 .fa-arrow-left::before {
-  content: "";
   left: 15px;
   position: absolute;
   top: 18px;
