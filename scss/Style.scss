@@ -7,6 +7,30 @@ $grey: #f2f2f2;
 $dark-op: #212121b0;
 $dark: #212121;
 
+
+@keyframes bouncing {
+
+	0% {
+		transform: translate3d(0, 20px, 0) scale(1.4, 0.65);
+	}
+
+	100% {
+		transform: translate3d(0, -30px, 0) scale(0.8, 1.2);
+	}
+}
+
+@keyframes disapear {
+
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+            z-index: -1;
+	}
+}
+
 @keyframes menu-item{
     0% {
         transform: translatey(25px);
@@ -334,4 +358,47 @@ transform: rotate(-360deg);
     width: 200px;
     transition: all 0.5s!important;
   }
+}
+
+
+.Loader{
+	width: 90px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  top: 50%;
+left: 50%;
+position: fixed;
+margin-top: -10px;
+margin-left: -40px;
+	&__item {
+		$anim-drt: 0.3s;
+		$anim-ease: cubic-bezier(.6,.05,.15,.95);
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		background: $tertiary;
+
+		&:nth-child(1) {
+			animation: bouncing $anim-drt alternate infinite $anim-ease;
+		}
+
+		&:nth-child(2) {
+			animation: bouncing $anim-drt $anim-drt/4 alternate infinite $anim-ease backwards;
+		}
+
+		&:nth-child(3) {
+			animation: bouncing $anim-drt $anim-drt/2 alternate infinite $anim-ease backwards;
+		}
+	}
+}
+
+.Loading-screen{
+  width: 100%;
+  background-color: white;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  animation: disapear 0.3s  forwards 0.1s;
+  animation-delay: 1.5s;
 }

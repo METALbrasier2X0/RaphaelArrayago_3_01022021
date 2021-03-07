@@ -1,4 +1,21 @@
 @charset "UTF-8";
+@keyframes bouncing {
+  0% {
+    transform: translate3d(0, 20px, 0) scale(1.4, 0.65);
+  }
+  100% {
+    transform: translate3d(0, -30px, 0) scale(0.8, 1.2);
+  }
+}
+@keyframes disapear {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
 @keyframes menu-item {
   0% {
     transform: translatey(25px);
@@ -455,6 +472,42 @@ header img {
     width: 200px;
     transition: all 0.5s !important;
   }
+}
+.Loader {
+  width: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  position: fixed;
+  margin-top: -10px;
+  margin-left: -40px;
+}
+.Loader__item {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #99E2D0;
+}
+.Loader__item:nth-child(1) {
+  animation: bouncing 0.3s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95);
+}
+.Loader__item:nth-child(2) {
+  animation: bouncing 0.3s 0.075s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
+}
+.Loader__item:nth-child(3) {
+  animation: bouncing 0.3s 0.15s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
+}
+
+.Loading-screen {
+  width: 100%;
+  background-color: white;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  animation: disapear 0.3s forwards 0.1s;
+  animation-delay: 1.5s;
 }
 
 /*# sourceMappingURL=Style.css.map */
