@@ -11,11 +11,11 @@ $dark: #212121;
 
 @keyframes create{
   0% {
-    display: none;
+    transform: scale(0);
   }
 
   100% {
-  display: block;
+  transform: scale(1);
   }
 }
 @keyframes bouncing {
@@ -321,7 +321,7 @@ header{ box-shadow: 0px 5px 10px -2px $dark-op;}
   transform-origin: right;
   width: 60px;
   height: 60px;
-  animation: create 1s ;
+  animation: create 2s ;
 
   position: absolute;
   color: white;
