@@ -463,7 +463,7 @@ header img {
   transform-origin: right;
   width: 60px;
   height: 60px;
-  animation: create 2s;
+  animation: create 1.8s;
   position: absolute;
   color: white;
   top: 0;
@@ -588,6 +588,24 @@ header img {
 
 .heart:hover > .heart-icon-full {
   opacity: 1 !important;
+}
+
+.heart-icon-empty {
+  position: absolute;
+}
+
+.heart-icon-full {
+  position: absolute;
+}
+
+.heart {
+  width: 15px;
+}
+
+.heart-menu {
+  position: absolute;
+  right: 35px;
+  top: 25px;
 }
 
 /*# sourceMappingURL=Style.css.map */
