@@ -4,11 +4,20 @@ $primary-op2: #9356DC26;
 $secondary: #FF79DA;
 $secondary-op: #FF79DAB0;
 $tertiary: #99E2D0;
+$tertiary-op: #99E2D0B0;
 $grey: #f2f2f2;
 $dark-op: #212121b0;
 $dark: #212121;
 
+@keyframes create{
+  0% {
+    display: none;
+  }
 
+  100% {
+  display: block;
+  }
+}
 @keyframes bouncing {
 
 	0% {
@@ -35,11 +44,11 @@ $dark: #212121;
 @keyframes menu-item{
     0% {
         transform: translatey(25px);
-        opacity: 0
+        opacity: 0;
     }
     100% {
         transform: translatey(0);
-        opacity: 1
+        opacity: 1;
     }
 }
 
@@ -53,7 +62,6 @@ color: $colour;
 html{
   width: 100%;
   font-family: 'Roboto', sans-serif;
-  max-width: 1550px;
 margin: auto;
 }
 
@@ -136,7 +144,7 @@ footer{
   padding: 20px;
   h3{font-family: 'Shrikhand', cursive;
   margin: 0px}
-  ul{padding: 0; margin: 10px,0,10px,0;}
+  ul{padding: 0 ; margin: 10px 0px 10px 0px ;}
   li{margin-top: 10px}
   a{color: white;}
   a:visited{color: white;}
@@ -178,7 +186,7 @@ footer{
     height: 237px;
     margin: 10px;
     position: relative;
-    width: 315px; height: 237px
+    width: 315px; height: 237px;
   &__img{width: 100%;    border-radius: 10px;}
   &__caption{background-color: white;position: absolute;width: 100%;top: 170px;padding-bottom:10px; h4{margin: 10px}p{margin: 10px;}i{position: absolute;top: 15px;
 right: 20px;
@@ -229,17 +237,18 @@ header img{margin-left: -15px;}
     height: 20px;
 }
 
-.fa-heart::before {
-    content: "\f004";
+.restaurant__img{
+  height: 100%;
 }
-
-.restaurant__img {
-  height: 100%;}
 
     .restaurant{width: 315px; height: 237px}
 
 @media (min-width: 950px) {
-
+  .footer-content{
+    max-width: 1330px;
+    padding-left: 30px;
+    margin: auto;
+  }
   html{
     background: $grey
   }
@@ -247,8 +256,17 @@ header img{margin-left: -15px;}
   #wrap-desktop{display: flex; flex-wrap: wrap;justify-content: center;}
   .restaurant{width: 315px; height: 237px}
 
+.zone{
+  width: 390px;
+  margin: auto;
+    margin-top: auto;
+margin-top: 58px !important;background: $grey
+}
 
-  body{background: $grey}
+#localisation{width: 350px; margin: auto; background: white; margin-bottom: 20px; border-bottom-left-radius: 5px;border-bottom-right-radius: 5px; box-shadow: 0px 5px 10px -2px $dark-op;}
+
+
+  #local-patch{ padding-bottom: 15px; background-size: cover; background-color: $tertiary; background-blend-mode: multiply; background-image: url("../images/restaurants/jay-wenningbackground.png")}
 
   .restaurant__img {
     height: 100%;}
@@ -303,13 +321,15 @@ header{ box-shadow: 0px 5px 10px -2px $dark-op;}
   transform-origin: right;
   width: 60px;
   height: 60px;
+  animation: create 1s ;
+
   position: absolute;
   color: white;
   top: 0;
   right: 0;
   color: white;
   font-size: 25px;
-  transition: all ease-in-out 0.5s!important;
+  transition: transform ease-in-out 0.5s!important;
   padding-top: 14px;
   padding-bottom: 14px;
   text-align: center;
@@ -324,7 +344,7 @@ header{ box-shadow: 0px 5px 10px -2px $dark-op;}
   right: 0;
   color: white;
   font-size: 25px;
-  transition: all  0.5s!important;
+  transition: transform 0.5s!important;
 }
 
 .item:hover{
@@ -346,6 +366,12 @@ transform: rotate(-360deg);
 
 }
 
+.fa-heart-l{display: none!important;}
+
+.fa-heart-i:hover .fa-heart-l{
+  display: block!important;
+}
+
 .fa-heart:hover{
   transition: all 0.3s;
   color: $secondary;
@@ -362,7 +388,6 @@ transform: rotate(-360deg);
     transition: all 0.5s!important;
   }
 }
-
 
 .Loader{
 	width: 90px;
@@ -405,3 +430,12 @@ margin-left: -40px;
   animation: disapear 0.3s  forwards 0.1s;
   animation-delay: 1.5s;
 }
+.nouveau{
+position: absolute;
+right: 15px;
+top: 15px;
+font-size: 11px;
+padding: 6px;
+color: #298F76;
+border-radius: 2px;
+background-color: $tertiary}
